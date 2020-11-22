@@ -27,6 +27,12 @@ body {
       font-size: 2rem;
    }
 }
+.stop-scroll {
+   overflow-y: hidden;
+}
+.scroll {
+   overflow-y: visible;
+}
 
 .flex {
    display: flex;
@@ -276,15 +282,20 @@ body {
       $pr: 85px;
 
       padding: 0 $pr 0 $pl;
-      width: calc(75% + 200px);
+      width: calc(75% + #{$pr} + #{$pl});
       margin-bottom: 150px;
 
       @media (max-width: 768px) {
-         padding: 20px;
+         width: 80%;
+         padding: 20px 10px;
+         margin-bottom: 40px;
       }
       @media (max-width: 576px) {
          margin-bottom: 30px;
-         width: calc(90% + 40px);
+         width: calc(90% - 100px);
+      }
+      @media (max-width: 466px) {
+         width: 90%;
       }
 
       font-size: 2rem;
@@ -469,8 +480,11 @@ body {
    background-size: cover;
    background-repeat: no-repeat;
 
-   @media (max-width: 576px) {
+   @media (max-width: 976px) {
       background-position: 60%;
+   }
+   @media (max-width: 576px) {
+      background-position: 50%;
    }
 
    .flex--subscribe {
@@ -533,6 +547,11 @@ body {
       position: relative;
       transition: all 0.6s ease-in;
 
+      @media (max-width: 968px) {
+         width: 40%;
+         padding: 20px 30px;
+         margin: 20px 0;
+      }
       @media (max-width: 576px) {
          width: 70%;
          padding: 20px 40px;
@@ -639,6 +658,13 @@ body {
             left: 0;
             z-index: 10;
             padding: 0 20px;
+
+            p.big-text {
+               @media (max-width: 768px) {
+                  margin: 0;
+                  font-size: 1.5rem;
+               }
+            }
          }
       }
    }
@@ -695,6 +721,10 @@ body {
       border-radius: 5px;
       font-size: 2rem;
 
+      @media (max-width: 768px) {
+         margin-top: 5px;
+      }
+
       .big-text {
          font-size: 20px;
          line-height: 1.25;
@@ -707,7 +737,12 @@ body {
    }
    .text-13px {
       font-size: 1.3rem;
+
+      @media (max-width: 768px) {
+         margin: 5px 0;
+      }
    }
+
    .content-img:hover,
    .content-img:active,
    .content-img:focus {
