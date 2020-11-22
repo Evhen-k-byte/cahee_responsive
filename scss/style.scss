@@ -48,16 +48,20 @@ body {
 }
 
 .wrap {
-   min-height: 100vh;
+   height: 100vh;
    background-position: right;
    background-repeat: no-repeat;
    background-size: cover;
    background-color: blue;
+
+   @media (max-width: 576px) {
+      height: auto;
+   }
 }
 
 .wrap--about-us {
    background-color: #00b3b3;
-   height: 100vh;
+   padding: 10px 0;
 }
 
 .wrap--yellow {
