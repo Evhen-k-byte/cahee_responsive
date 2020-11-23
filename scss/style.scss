@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;600;900&display=swap");
 @import "normalize";
+@import "animations";
 @import "header";
 @import "footer";
 
@@ -30,6 +31,7 @@ body {
 .stop-scroll {
    overflow-y: hidden;
 }
+
 .scroll {
    overflow-y: visible;
 }
@@ -321,7 +323,7 @@ body {
          }
          &:hover:before {
             width: 100%;
-            z-index: 100;
+            z-index: 10;
          }
       }
 
