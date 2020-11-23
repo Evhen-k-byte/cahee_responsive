@@ -23,6 +23,7 @@ body {
    font-size: 1.7rem;
    background-color: #f9f8fb;
    color: #262626;
+   scroll-behavior: smooth;
 
    @media (max-width: 576px) {
       font-size: 2rem;

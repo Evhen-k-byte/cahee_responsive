@@ -1,12 +1,13 @@
 /* плавная прокрутка на 100vh */
-(function () {
-  'use strict';
+'use strict';
 
-  var btnScrollDown = document.querySelector('#scroll_down');
+(function () {
+
+  let btnScrollDown = document.querySelector('#scroll_down');
 
   function scrollDown() {
 
-    var windowCoords = document.documentElement.clientHeight;
+    let windowCoords = document.documentElement.clientHeight;
 
     (function scroll() {
       if (window.pageYOffset < windowCoords) {
@@ -26,7 +27,7 @@ function closeMenu() {
 /* автозакрытие меню */
 
 /* запрет прокрутки */
-var body = document.getElementById("body");
+let body = document.getElementById("body");
 function stopScroll() {
   body.classList.toggle("stop-scroll");
 }
@@ -39,9 +40,9 @@ function scroll() {
 /* включение прокрутки */
 
 /* плавный скрол для меню */
-var isBurger = true;
+let isBurger = true;
 const anchors = document.querySelectorAll('a[href*="#"]')
-anchors.forEach((anchor) => {
+anchors.forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault()
     const blockID = anchor.getAttribute('href').substr(1)
@@ -64,10 +65,10 @@ anchors.forEach((anchor) => {
 /* плавный скрол для меню */
 
 /* манипуляции с переключателем меню */
-var changer = document.getElementById("changer");
-var toggleContainer = document.getElementById("toggleContainer");
-var toggleLeft = document.getElementById("toggle-left");
-// var arrow = document.getElementById("arrow");
+let changer = document.getElementById("changer");
+let toggleContainer = document.getElementById("toggleContainer");
+let toggleLeft = document.getElementById("toggle-left");
+
 
 
 function Rotate() {
@@ -93,7 +94,7 @@ function closeNav() {
 /* открыть/закрыть боковое меню */
 
 /* следить за кликами*/
-var isMenuShow = true;
+let isMenuShow = true;
 toggleLeft.addEventListener("click", function () {
   toggleLeft.classList.toggle("animation-target__splat");
   if (isMenuShow) {
