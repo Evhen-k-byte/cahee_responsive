@@ -54,7 +54,7 @@ anchors.forEach((anchor) => {
     }
     else {
       closeNav();
-      arrow.classList.remove("animation-target__splat");
+      toggleLeft.classList.remove("animation-target__splat");
       scroll();
       isMenuShow = true;
     }
@@ -67,7 +67,7 @@ anchors.forEach((anchor) => {
 var changer = document.getElementById("changer");
 var toggleContainer = document.getElementById("toggleContainer");
 var toggleLeft = document.getElementById("toggle-left");
-var arrow = document.getElementById("arrow");
+// var arrow = document.getElementById("arrow");
 
 
 function Rotate() {
@@ -95,7 +95,7 @@ function closeNav() {
 /* следить за кликами*/
 var isMenuShow = true;
 toggleLeft.addEventListener("click", function () {
-  arrow.classList.toggle("animation-target__splat");
+  toggleLeft.classList.toggle("animation-target__splat");
   if (isMenuShow) {
     openNav();
     stopScroll();
