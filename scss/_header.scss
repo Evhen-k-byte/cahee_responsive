@@ -5,15 +5,22 @@
 
 .header {
    min-height: 100vh;
+   background-image: url(../img/header/image1.jpg);
    background-position: 50% 0;
    background-repeat: no-repeat;
    background-size: auto 100%;
 
+   @media (max-width: 992px) {
+      background-image: url(../img/header/image1-1024.jpg);
+      background-position: 100% 0;
+   }
    @media (max-width: 766px) {
-      background-position: 0 0;
+      background-image: url(../img/header/image1-800.jpg);
+      background-position: 30% 0;
+      min-height: 600px;
    }
    @media (max-width: 576px) {
-      background-position: -100% 0;
+      background-image: none;
    }
 
    &__logo {
@@ -243,6 +250,9 @@
       cursor: pointer;
       outline: none;
 
+      @media (max-width: 768px) {
+         top: 60%;
+      }
       @media (max-width: 576px) {
          bottom: 20px;
       }

@@ -55,8 +55,11 @@ body {
    background-position: right;
    background-repeat: no-repeat;
    background-size: cover;
-   background-color: blue;
+   background-color: #8bbdfc;
 
+   @media (max-width: 768px) {
+      min-height: 500px;
+   }
    @media (max-width: 576px) {
       min-height: auto;
    }
@@ -196,8 +199,18 @@ body {
 
 // section wrap--our-services
 .wrap--our-services {
+   background-image: url(../img/bg.jpg);
+
+   @media (max-width: 992px) {
+      background-image: url(../img/bg-1024.jpg);
+      background-position: 50% 0;
+   }
+   @media (max-width: 768px) {
+      background-image: url(../img/bg-800.jpg);
+      background-position: 50% 0;
+   }
    @media (max-width: 576px) {
-      background-position: 10% 0;
+      background-image: none;
    }
 }
 
@@ -467,6 +480,16 @@ body {
             }
          }
 
+         // .img-source {
+         //    display: block;
+         //    min-width: 100%;
+         //    min-height: 100%;
+         //    position: absolute;
+         //    left: 50%;
+         //    top: 50%;
+         //    // transform: translate(-50%, -50%);
+         // }
+
          img {
             display: block;
             width: 100%;
@@ -484,14 +507,17 @@ body {
 // section subscribe
 .subscribe {
    min-height: 500px;
+   background-image: url(../img/bg2.jpg);
    background-position: right;
    background-size: cover;
    background-repeat: no-repeat;
 
-   @media (max-width: 976px) {
-      background-position: 60%;
+   @media (max-width: 992px) {
+      background-image: url(../img/bg2-1024.jpg);
+      background-position: -70% 0;
    }
-   @media (max-width: 576px) {
+   @media (max-width: 768px) {
+      background-image: url(../img/bg2-800.jpg);
       background-position: 50%;
    }
 
