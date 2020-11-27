@@ -3,6 +3,12 @@
 
 (function () {
 
+  // надо почитать, шо воно таке
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+  // надо почитать, шо воно таке
+
   let btnScrollDown = document.querySelector('#scroll_down');
 
   function scrollDown() {
