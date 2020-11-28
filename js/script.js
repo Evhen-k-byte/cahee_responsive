@@ -3,11 +3,11 @@
 
 (function () {
 
-  // надо почитать, шо воно таке
+  // костыль для IE
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
-  // надо почитать, шо воно таке
+  // костыль для IE
 
   let btnScrollDown = document.querySelector('#scroll_down');
 
@@ -17,7 +17,7 @@
 
     (function scroll() {
       if (window.pageYOffset < windowCoords) {
-        window.scrollBy(0, 5);
+        window.scrollBy(0, 30);
         setTimeout(scroll, 5);
       }
     })();
@@ -25,6 +25,12 @@
   btnScrollDown.addEventListener('click', scrollDown);
 })();
 /* плавная прокрутка на 100vh */
+
+/* костыль для IE */
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+/* костыль для IE */
 
 /* автозакрытие меню */
 function closeMenu() {

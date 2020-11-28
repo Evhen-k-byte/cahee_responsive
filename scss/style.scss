@@ -462,6 +462,7 @@ body {
       }
 
       .image {
+         display: block;
          box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.5);
          padding-top: 70%;
          overflow: hidden;
@@ -481,17 +482,7 @@ body {
             }
          }
 
-         // .img-source {
-         //    display: block;
-         //    min-width: 100%;
-         //    min-height: 100%;
-         //    position: absolute;
-         //    left: 50%;
-         //    top: 50%;
-         //    // transform: translate(-50%, -50%);
-         // }
-
-         .img-source {
+         .img {
             display: block;
             min-width: 100%;
             min-height: 100%;
