@@ -3,11 +3,11 @@
 
 (function () {
 
-  // костыль для IE
+  // костыль для IE11
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
-  // костыль для IE
+  // костыль для IE11
 
   let btnScrollDown = document.querySelector('#scroll_down');
 
