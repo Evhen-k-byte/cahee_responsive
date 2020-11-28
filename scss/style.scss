@@ -448,6 +448,7 @@ body {
       }
 
       .image {
+         display: block;
          box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.5);
          padding-top: 70%;
          overflow: hidden;
@@ -466,7 +467,7 @@ body {
             }
          }
 
-         img {
+         .img {
             display: block;
             width: 100%;
             height: 100%;

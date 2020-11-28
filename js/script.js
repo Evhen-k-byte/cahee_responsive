@@ -10,7 +10,7 @@
 
     (function scroll() {
       if (window.pageYOffset < windowCoords) {
-        window.scrollBy(0, 5);
+        window.scrollBy(0, 30);
         setTimeout(scroll, 5);
       }
     })();
@@ -18,6 +18,12 @@
   btnScrollDown.addEventListener('click', scrollDown);
 })();
 /* плавная прокрутка на 100vh */
+
+/* костыль для IE */
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+/* костыль для IE */
 
 /* автозакрытие меню */
 function closeMenu() {
@@ -41,7 +47,7 @@ function scroll() {
 /* плавный скрол для меню */
 var isBurger = true;
 const anchors = document.querySelectorAll('a[href*="#"]')
-anchors.forEach((anchor) => {
+anchors.forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault()
     const blockID = anchor.getAttribute('href').substr(1)
